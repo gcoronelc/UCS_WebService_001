@@ -21,6 +21,20 @@
 - Correo para el curso: egcc.ucs@gmail.com
 
 
+## Recursos de Web Service
+
+### SOAP
+
+- https://www.adictosaltrabajo.com/tutoriales/introduccion-soap-ui/
+- http://www.pmoinformatica.com/2016/01/soapui-herramienta-probar-webservice.html
+
+### REST
+
+- http://www.groupkt.com/post/c9b0ccb9/country-and-other-related-rest-webservices.htm
+- https://jsonplaceholder.typicode.com/
+
+
+
 ## Recurso recomendados
 
 - Blog de Desarrollo de Software: http://gcoronelc.blogspot.pe/
