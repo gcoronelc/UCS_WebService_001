@@ -13,6 +13,7 @@
 - Número de créditos	:	4
 - Semestre Académico	:	2017-1B
 - Ciclo	:	VIII
+- Grupo : A (Martes y Jueves)
 
 ## DOCENTE
 
