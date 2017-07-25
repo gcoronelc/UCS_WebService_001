@@ -22,4 +22,12 @@
 - https://youtu.be/sbh3H7jdQvk
 - https://youtu.be/-RMrqKL0Z7g
 
+## SOAP
+
+- https://youtu.be/raoO4CakyNw
+- https://youtu.be/YF3wohC-I3o
+- https://youtu.be/MuYbyetyiPA
+- https://youtu.be/y_QrwztLXpM
+- https://youtu.be/JpSfSQAq9Bs
+- https://youtu.be/2ToEge_xybI
 
