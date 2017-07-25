@@ -17,6 +17,9 @@
 - http://blog.bdoughan.com/2010/12/jaxb-and-marshalunmarshal-schema.html
 
 
+## SOAP
 
+- https://youtu.be/sbh3H7jdQvk
+- https://youtu.be/-RMrqKL0Z7g
 
 
