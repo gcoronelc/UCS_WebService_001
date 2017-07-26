@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+  <nombre>Spring Framework</nombre>  
+  <profesor>Gustavo Coronel</profesor>
+  <estudiantes>
+    <estudiante carrera="Sistemas">
+      <nombre>Pedro</nombre>
+      <nota>18</nota>
+    </estudiante>
+    <estudiante carrera="Software">
+      <nombre>Claudia</nombre>
+      <nota>20</nota>
+    </estudiante>
+    <estudiante carrera="Sistemas">
+      <nombre>Karla</nombre>
+      <nota>15</nota>
+    </estudiante>
+    <estudiante carrera="Sistemas">
+      <nombre>Manuel</nombre>
+      <nota>13</nota>
+    </estudiante>
+    <estudiante carrera="Software">
+      <nombre>Jose</nombre>
+      <nota>17</nota>
+    </estudiante>
+  </estudiantes>
+</curso>
