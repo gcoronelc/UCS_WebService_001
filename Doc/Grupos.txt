@@ -15,7 +15,7 @@ Integrantes:
 - Pasapera Aguilar, Marilu
 - Parodi Guerrero, Victor Fernando
 - Portocarrero Miranda, Percy Arturo
-- Silva Polo, Cesar Rolando
+
 
 
 Grupo 3
@@ -32,24 +32,28 @@ Grupo 4
 ======================================
 Tema:
 Integrantes:
-
-
+- Mamani Pocco, Frank Reynaldo
+- Vargas Soto, Juan Carlos
+- Vilchez Melendez, Zany Cristina
 
 
 Grupo 5
 ======================================
 Tema:
 Integrantes:
+- Silva Polo, Cesar Rolando
+- Melgar Prada, Jose Luis
+- Alvarado Aguado, Lucas
 
 
+Grupo 6
+======================================
+Tema: Validación de Documentos
+Integrantes:
+- Chipana Avendaño, Richard
+- Monzon Villa, Carlos Eduardo
+- Ramos Pio, Junior Ismael
+- Gonzales Sulca, Carmen Leydi
 
-Alvarado Aguado, Lucas
-Chipana Avendaño, Richard
-Gonzales Sulca, Carmen Leydi
-Mamani Pocco, Frank Reynaldo
-Melgar Prada, Jose Luis
-Monzon Villa, Carlos Eduardo
-Ramos Pio, Junior Ismael
-Vargas Soto, Juan Carlos
-Vilchez Melendez, Zany Cristina
+
 
