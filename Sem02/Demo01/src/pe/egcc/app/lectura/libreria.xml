@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<libreria> 
+  <nombre>LIBRERIA TECNICA</nombre> 
+  <libros> 
+    <libro isbn="3478653245985"> 
+      <titulo>Fundamentos de Programación</titulo> 
+      <autor>Ricardo Marcelo</autor> 
+    </libro> 
+    <libro isbn="7843569823659"> 
+      <titulo>Curso de programación java web</titulo> 
+      <autor>Gustavo Coronel</autor> 
+    </libro> 
+    <libro isbn="6578430965237"> 
+      <titulo>Mineria de Datos</titulo> 
+      <autor>Sergio Matsukawa</autor> 
+    </libro> 
+  </libros> 
+</libreria>
+
