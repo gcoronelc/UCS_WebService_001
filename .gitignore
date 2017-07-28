@@ -18,3 +18,8 @@ hs_err_pid*
 /Sem01/SOAP_WS_CLIENT1/build/
 /Sem02/Demo01/nbproject/private/
 /Sem02/Demo01/build/
+/Sem02/WSMate/nbproject/private/
+/Sem02/WSMate/build/
+/Sem02/WSMateClient/nbproject/private/
+/Sem02/WSMateClient/build/
+/Sem02/WSMateClient/dist/

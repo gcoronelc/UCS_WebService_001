@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-WSMate" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WSMate"/>
+        <property name="wsdl-WSMate" location="xml-resources/web-service-references/WSMate/wsdl/localhost_8080/WSMate/WSMate.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WSMate" destdir="${build.generated.dir}/jax-wsCache/WSMate" wsdl="${wsdl-WSMate}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WSMate/WSMate?wsdl" xnocompile="true" xendorsed="true" package="pe.egcc.ws">
+            <depends file="${wsdl-WSMate}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WSMate"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WSMate">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WSMate" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WSMate"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pe/egcc/ws"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WSMate"/>
+</project>

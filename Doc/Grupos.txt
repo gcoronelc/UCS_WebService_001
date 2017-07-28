@@ -20,7 +20,7 @@ Integrantes:
 
 Grupo 3
 ======================================
-Tema:
+Tema: 
 Integrantes:
 - Saavedra Veliz, Luis Gustavo
 - Moreno Nolazco, Roberto Carlos
@@ -30,7 +30,7 @@ Integrantes:
 
 Grupo 4
 ======================================
-Tema:
+Tema: 
 Integrantes:
 - Mamani Pocco, Frank Reynaldo
 - Vargas Soto, Juan Carlos
@@ -39,7 +39,7 @@ Integrantes:
 
 Grupo 5
 ======================================
-Tema:
+Tema: 
 Integrantes:
 - Silva Polo, Cesar Rolando
 - Melgar Prada, Jose Luis
