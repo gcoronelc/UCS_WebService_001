@@ -83,4 +83,13 @@
 - Lección 09: http://gcoronelc.blogspot.pe/2014/04/java-poo-leccion-09-excepciones.html
 
 
+## Autoevaluación
+
+- https://www.tutorialspoint.com/webservices/webservices_online_quiz.htm
+- https://modernpathshala.com/Learn/SOAP-Web-Service/Quiz
+- https://www.proprofs.com/quiz-school/story.php?title=Web-Services-Review-Quiz-1
+- http://searchmicroservices.techtarget.com/quiz/Quiz-What-do-you-know-about-Web-services-technology
+- http://www.c4learn.com/mcq/web-services-mcq/multiple-choice-questions-set-1/
+- http://itelearn.com/webservices-testing-quiz-i/
+
 
