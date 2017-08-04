@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.eurekabank.pe/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.eurekabank.pe/">
+
+<xs:element name="leerMovimientos" type="tns:leerMovimientos"/>
+
+<xs:element name="leerMovimientosResponse" type="tns:leerMovimientosResponse"/>
+
+<xs:element name="movimiento" type="tns:movimiento"/>
+
+<xs:complexType name="leerMovimientos">
+<xs:sequence>
+<xs:element name="numeroCuenta" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leerMovimientosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:movimiento" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movimiento">
+<xs:sequence>
+<xs:element name="accion" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="tns:date" minOccurs="0"/>
+<xs:element name="importe" type="xs:double"/>
+<xs:element name="numeroMovimiento" type="xs:int"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+<xs:attribute name="codigo" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="date">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
