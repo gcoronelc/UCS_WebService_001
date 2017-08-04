@@ -30,7 +30,7 @@ Integrantes:
 
 Grupo 4
 ======================================
-Tema: 
+Tema: Sistema de Tickes
 Integrantes:
 - Mamani Pocco, Frank Reynaldo
 - Vargas Soto, Juan Carlos
