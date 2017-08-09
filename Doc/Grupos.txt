@@ -23,7 +23,7 @@ Grupo 3
 Tema: 
 Integrantes:
 - Saavedra Veliz, Luis Gustavo
-- Moreno Nolazco, Roberto Carlos
+- Moreno Nolazco, Roberto Carlos *
 - Sanchez Bejar, Jorge
 - Medina Moscoso, Daniel Jesus
 
