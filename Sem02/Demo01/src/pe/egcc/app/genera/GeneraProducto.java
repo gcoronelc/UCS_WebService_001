@@ -12,7 +12,7 @@ public class GeneraProducto {
     
     Producto producto = new Producto(1000, "Refrigeradora", 4790.00);
     
-    File file = new File("E:\\egcc\\producto.xml");
+    File file = new File("E:\\111\\producto.xml");
     
     JAXBContext jaxbContext = JAXBContext.newInstance(Producto.class);
     Marshaller jaxbMarshaller = jaxbContext.createMarshaller();

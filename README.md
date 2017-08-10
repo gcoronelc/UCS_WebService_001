@@ -29,6 +29,12 @@
 - https://www.adictosaltrabajo.com/tutoriales/introduccion-soap-ui/
 - http://www.pmoinformatica.com/2016/01/soapui-herramienta-probar-webservice.html
 
+### WEB SERVICE
+
+- http://gcoronelc.blogspot.pe/2017/08/web-service-soap-ejemplo-1.html
+- https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZTYpk_1DOowOGWJMIH5T39
+
+
 ### REST
 
 - http://www.groupkt.com/post/c9b0ccb9/country-and-other-related-rest-webservices.htm
