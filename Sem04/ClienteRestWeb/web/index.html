@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>REST CLIENT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-2.2.2.min.js" ></script>
+
+  </head>
+  <body>
+
+    <div>REST CLIENT</div>
+
+    <button id="btnLeer" >Leer REST</button>
+    <div id="divAlgo"></div>
+
+    <script>
+
+      $("#btnLeer").click(fnProcesar);
+
+      function fnProcesar() {
+        /*
+         $.ajax({ 
+         url: 'http://172.33.0.34:8089/WSrest/rest/wszany', // url del recurso 
+         type: "GET", // podría ser GET, POST, PUT o DELETE. 
+         headers: {"Accept":"application/json"}, 
+         success: function (respuesta) { 
+         $("#divAlgo").html(respuesta.texto);
+         console.log( respuesta ); 
+         alert(respuesta.texto); 
+         } 
+         });
+         */
+        $.getJSON('http://172.33.0.34:8089/WSrest/rest/wszany', function (respuesta) {
+          $("#divAlgo").html(respuesta.texto);
+          console.log(respuesta);
+          alert(respuesta.texto);
+        });
+
+      }
+
+
+    </script>
+
+  </body>
+</html>

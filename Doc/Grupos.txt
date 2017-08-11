@@ -20,7 +20,7 @@ Integrantes:
 
 Grupo 3
 ======================================
-Tema: 
+Tema: Validación de Cliente y Registro de Venta
 Integrantes:
 - Saavedra Veliz, Luis Gustavo
 - Moreno Nolazco, Roberto Carlos *
