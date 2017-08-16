@@ -1,6 +1,7 @@
 package pe.egcc.rest.server;
 
 import java.util.List;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -48,5 +49,38 @@ public class WSZany {
     return lista;
   }
   
+  
+  @POST
+  @Path(value = "/regmov")
+  @Produces({MediaType.APPLICATION_JSON })
+  public Mensaje regmov(
+        @FormParam("cuenta")  String cuenta,
+        @FormParam("importe")  double importe,
+        @FormParam("clave")  String clave,
+        @FormParam("codemp")  String codemp){
+    // Control
+    Mensaje mensaje = new Mensaje();
+    
+    System.err.println("Cuenta: " + cuenta);
+    
+    // Proceso
+    try {
+     
+      CuentaService service = new CuentaService();
+      service.procRetiro(cuenta, importe, clave, codemp);
+      
+      mensaje.setCode(1);
+      mensaje.setTexto("Proceso ok.");
+      
+    } catch (Exception e) {
+      
+      mensaje.setCode(-1);
+      mensaje.setTexto(e.getMessage());
+      
+    }
+    
+    // Reporte
+    return mensaje;
+  }
   
 }
