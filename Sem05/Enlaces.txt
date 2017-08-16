@@ -1,0 +1,7 @@
+http://www.asp.net/web-api/overview/advanced/calling-a-web-api-from-a-net-client
+
+https://www.youtube.com/watch?v=iw_uijNiFEc&t=1410s
+
+https://www.youtube.com/watch?v=EFQFC3jn3dE&list=PLIRq7nByT7aRWUzo4_vJO2CjkZx8363h5
+
+https://www.youtube.com/watch?v=PrDBpY4hnN0
