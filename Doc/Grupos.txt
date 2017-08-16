@@ -17,13 +17,12 @@ Integrantes:
 - Portocarrero Miranda, Percy Arturo
 
 
-
 Grupo 3
 ======================================
 Tema: Validación de Cliente y Registro de Venta
 Integrantes:
 - Saavedra Veliz, Luis Gustavo
-- Moreno Nolazco, Roberto Carlos *
+- Moreno Nolazco, Roberto Carlos 
 - Sanchez Bejar, Jorge
 - Medina Moscoso, Daniel Jesus
 
@@ -44,6 +43,7 @@ Integrantes:
 - Silva Polo, Cesar Rolando
 - Melgar Prada, Jose Luis
 - Alvarado Aguado, Lucas
+- Santos Walter
 
 
 Grupo 6
