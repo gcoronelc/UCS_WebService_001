@@ -2,6 +2,13 @@ package pe.egcc.rest.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+/**
+ *
+ * @author Gustavo Coronel
+ * @blog   gcoronelc.blogspot.com
+ * @email  gcoronelc@gmail.com
+ */
 @XmlRootElement
 public class Mensaje {
 

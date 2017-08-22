@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.egcc.rest.db.AccesoDB;
+import pe.egcc.rest.model.Cuenta;
 import pe.egcc.rest.model.Movimiento;
 
 /**
@@ -17,7 +18,7 @@ public class CuentaService {
 
   public List<Movimiento> leerMovimientos(String numeroCuenta) {
 
-    Connection connection = null;
+    Connection cn = null;
 
     List<Movimiento> lista = new ArrayList<Movimiento>();
     String sql = "SELECT A.chr_cuencodigo, A.int_movinumero, A.dtt_movifecha, "
@@ -28,25 +29,25 @@ public class CuentaService {
 
     try {
 
-      connection = AccesoDB.getConnection();
-      PreparedStatement preparedStatement = connection.prepareStatement(sql);
+      cn = AccesoDB.getConnection();
+      PreparedStatement preparedStatement = cn.prepareStatement(sql);
       preparedStatement.setString(1, numeroCuenta);
-      ResultSet resultSet = preparedStatement.executeQuery();
+      ResultSet rs = preparedStatement.executeQuery();
 
-      while (resultSet.next()) {
+      while (rs.next()) {
 
         Movimiento cuenta = new Movimiento();
-        cuenta.setCodigo(resultSet.getNString(1));
-        cuenta.setNumeroMovimiento(resultSet.getInt(2));
-        cuenta.setFecha(resultSet.getDate(3));
-        cuenta.setTipo(resultSet.getString(4));
-        cuenta.setAccion(resultSet.getString(5));
-        cuenta.setImporte(resultSet.getDouble(6));
+        cuenta.setCodigo(rs.getNString(1));
+        cuenta.setNumeroMovimiento(rs.getInt(2));
+        cuenta.setFecha(rs.getDate(3));
+        cuenta.setTipo(rs.getString(4));
+        cuenta.setAccion(rs.getString(5));
+        cuenta.setImporte(rs.getDouble(6));
 
         lista.add(cuenta);
       }
 
-      resultSet.close();
+      rs.close();
 
     } catch (SQLException e) {
 
@@ -55,7 +56,7 @@ public class CuentaService {
     } finally {
 
       try {
-        connection.close();
+        cn.close();
       } catch (Exception e) {
       }
 
@@ -139,5 +140,65 @@ public class CuentaService {
     }
   }
   
+  public List<Cuenta> leerCuentas(String sucucodigo) {
+    
+    List<Cuenta> lista = new ArrayList<Cuenta>();
+    
+    String sql = "SELECT sucucodigo, sucunombre, cliecodigo, cliepaterno, "
+            + "cliematerno, clienombre, cuencodigo, cuensaldo, cuenestado, "
+            + "monecodigo, monenombre FROM v_cuenta ";
+    
+    Connection cn = null;
+
+    try {
+
+      cn = AccesoDB.getConnection();
+      PreparedStatement pstm;
+      
+      if( sucucodigo != null && !sucucodigo.isEmpty() ) {
+        sql += " WHERE sucucodigo = ?";
+        pstm = cn.prepareStatement(sql);
+        pstm.setString(1, sucucodigo);
+      } else {
+        pstm = cn.prepareStatement(sql);
+      }
+      
+      ResultSet rs = pstm.executeQuery();
+
+      while (rs.next()) {
+
+        Cuenta cuenta = new Cuenta();
+        cuenta.setSucucodigo(rs.getString("sucucodigo"));
+        cuenta.setSucunombre(rs.getString("sucunombre"));
+        cuenta.setCliecodigo(rs.getString("cliecodigo"));
+        cuenta.setCliepaterno(rs.getString("cliepaterno"));
+        cuenta.setCliematerno(rs.getString("cliematerno"));
+        cuenta.setClienombre(rs.getString("clienombre"));
+        cuenta.setCuencodigo(rs.getString("cuencodigo"));
+        cuenta.setCuensaldo(rs.getDouble("cuensaldo"));
+        cuenta.setCuenestado(rs.getString("cuenestado"));
+        cuenta.setMonecodigo(rs.getString("monecodigo"));
+        cuenta.setMonenombre(rs.getString("monenombre"));
+        lista.add(cuenta);
+        
+      }
+
+      rs.close();
+
+    } catch (SQLException e) {
+
+      throw new RuntimeException(e.getMessage());
+
+    } finally {
+
+      try {
+        cn.close();
+      } catch (Exception e) {
+      }
+
+    }
+
+    return lista;
+  }
   
 }
