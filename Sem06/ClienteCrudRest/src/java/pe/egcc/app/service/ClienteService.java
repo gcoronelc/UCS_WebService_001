@@ -110,7 +110,7 @@ public class ClienteService {
   public void insertar(ClienteModel bean) {
     Connection cn = null;
     try {
-      // Obtener la conexi�n
+      // Obtener la conexión
       cn = AccesoDB.getConnection();
       // Habilitar la transacci�n
       cn.setAutoCommit(false);
@@ -135,7 +135,7 @@ public class ClienteService {
       pstm = cn.prepareStatement(sql);
       pstm.setInt(1, cont);
       pstm.executeUpdate();
-      // Generar C�digo
+      // Generar Código
       String patron = "%0" + size + "d";
       String codigo = String.format(patron, cont);
       // Registrar al cliente
@@ -158,7 +158,7 @@ public class ClienteService {
       pstm.executeUpdate();
       pstm.close();
       bean.setCodigo(codigo);
-      // Confimar transacci�n
+      // Confimar transacción
       cn.commit();
     } catch (SQLException e) {
       try {
@@ -171,7 +171,7 @@ public class ClienteService {
         cn.rollback();
       } catch (Exception e1) {
       }
-      throw new RuntimeException("Error en el proceso Registrar Deposito, intentelo mas tarde.");
+      throw new RuntimeException("Error en el proceso Registrar Depósito, intentelo mas tarde.");
     } finally {
       try {
         cn.close();

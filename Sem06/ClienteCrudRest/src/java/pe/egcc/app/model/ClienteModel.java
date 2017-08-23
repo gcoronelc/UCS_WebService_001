@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Gustavo Coronel
  */
-@XmlRootElement(name = "cliente")
+@XmlRootElement(name = "clientes")
 public class ClienteModel {
 
   private String codigo;
