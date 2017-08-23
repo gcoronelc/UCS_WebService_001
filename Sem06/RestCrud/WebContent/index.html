@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery/jquery.js"></script>
+</head>
+<body>
+  <p>Lista la aplicación.</p>
+  <form id="form1" >
+  	<p>Codigo: <input type="text" id="codigo" name="codigo">
+  	<input type="button" id="btnConsultar" value="Consultar"/>
+  	<input type="button" id="btnConsultar2" value="Todos"/></p>
+  </form>
+  <div id="divDatos">
+  	datos del clientes
+  </div>
+  <script type="text/javascript">
+  	
+  	$("#btnConsultar").click(function(){
+  		var codigo = $("#codigo").val();
+  		$.ajax({
+            url: 'http://localhost:8083/restcrud/rest/clientes/' + codigo, // url del recurso
+            type: "GET", // podría ser get, post, put o delete.
+            headers: {"Accept":"application/json"},
+            //contentType: "application/xml; charset=utf-8",
+            //data: {}, // datos a pasar al servidor, en caso de necesitarlo
+            //dataType: "xml",
+            success: function (obj) {
+              var html = "<p>Código: " + obj.codigo + "</p>";
+              html += "<p>Paterno: " + obj.paterno + "</p>";
+              html += "<p>Materno: " + obj.materno + "</p>";
+              $("#divDatos").html(html);
+            }
+          });
+  	});
+  	
+  	$("#btnConsultar2").click(function(){
+  		$.ajax({
+            url: 'http://localhost:8083/restcrud/rest/clientes', // url del recurso
+            type: "GET", // podría ser get, post, put o delete.
+            headers: {"Accept":"application/json"},
+            //contentType: "application/xml; charset=utf-8",
+            //data: {}, // datos a pasar al servidor, en caso de necesitarlo
+            //dataType: "xml",
+            success: function (lista) {
+              var html = "<p>Código: " + obj.codigo + "</p>";
+              html += "<p>Paterno: " + obj.paterno + "</p>";
+              html += "<p>Materno: " + obj.materno + "</p>";
+              $("#divDatos").html(html);
+            }
+          });
+  	});
+  
+  </script>
+</body>
+</html>
