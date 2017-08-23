@@ -1,4 +1,4 @@
-package pe.egcc.app.domain;
+package pe.egcc.app.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -140,6 +140,13 @@ public class ClienteModel {
   public String getEmail() {
     return email;
   }
+
+  @Override
+  public String toString() {
+    return codigo + " | " + paterno + " | " + materno;
+  }
+  
+  
 
   /**
    * @param email the email to set
