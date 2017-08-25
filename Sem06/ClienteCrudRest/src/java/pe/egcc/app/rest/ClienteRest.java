@@ -2,8 +2,10 @@ package pe.egcc.app.rest;
 
 import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -63,22 +65,56 @@ public class ClienteRest {
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public MensajeModel add(ClienteModel bean) {
-    
+
     MensajeModel mensaje = new MensajeModel();
-    
+
     try {
-      
+
       service.insertar(bean);
       mensaje.setCodigo(1);
       mensaje.setMensaje("Proceso ok. Codigo: " + bean.getCodigo() + ".");
-      
+
     } catch (Exception e) {
-      
+
       mensaje.setCodigo(-1);
       mensaje.setMensaje(e.getMessage());
-      
+
     }
+
+    return mensaje;
+
+  }
+
+  @PUT
+  @Consumes(MediaType.APPLICATION_JSON)
+  @Produces(MediaType.APPLICATION_JSON)
+  public MensajeModel update(ClienteModel bean) {
+    MensajeModel mensaje = new MensajeModel();
+    try {
+      service.actualizar(bean);
+      mensaje.setCodigo(1);
+      mensaje.setMensaje("Proceso ok.");
+    } catch (Exception e) {
+      mensaje.setCodigo(-1);
+      mensaje.setMensaje(e.getMessage());
+    }
+    return mensaje;
+  }
+
+  @DELETE
+  @Path("{codigo}")
+  @Produces(MediaType.APPLICATION_JSON)
+  public MensajeModel remove(@PathParam("codigo") String codigo) {
     
+    MensajeModel mensaje = new MensajeModel();
+    try {
+      service.eliminar(codigo);
+      mensaje.setCodigo(1);
+      mensaje.setMensaje("Proceso ok.");
+    } catch (Exception e) {
+      mensaje.setCodigo(-1);
+      mensaje.setMensaje(e.getMessage());
+    }
     return mensaje;
     
   }
