@@ -31,7 +31,7 @@ public class ClienteRest {
   }
 
   @GET
-  @Path("traer")
+  @Path("buscar")
   @Produces({MediaType.APPLICATION_JSON})
   public List<ClienteModel> getClientes(
           @QueryParam("paterno") String paterno,
@@ -105,7 +105,7 @@ public class ClienteRest {
   @Path("{codigo}")
   @Produces(MediaType.APPLICATION_JSON)
   public MensajeModel remove(@PathParam("codigo") String codigo) {
-    
+
     MensajeModel mensaje = new MensajeModel();
     try {
       service.eliminar(codigo);
@@ -116,7 +116,7 @@ public class ClienteRest {
       mensaje.setMensaje(e.getMessage());
     }
     return mensaje;
-    
+
   }
 
 }

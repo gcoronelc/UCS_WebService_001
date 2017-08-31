@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>INSERTAR NUEVO CLIENTE</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>BUSCAR CLIENTES</h2>
+  <form id="form1" >
+    <table>
+      <tr>
+        <td>Paterno</td>
+        <td>Materno</td>
+        <td>Nombre</td>
+        <td rowspan="2"><input class="boton" type="button" id="btnBuscar" value="Buscar"></td>
+        <td rowspan="2"><input class="boton" type="button" id="btnTodos" value="Todos"></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="paterno" name="paterno"></td>
+        <td><input type="text" id="materno" name="materno"></td>
+        <td><input type="text" id="nombre" name="nombre"></td>
+      </tr>
+    </table>
+  </form>
+  <div id="divDatos">
+    <h1>RESULTADO</h1>
+    <table border="1" >
+      <thead>
+        <tr>
+          <th>CODIGO</th>
+          <th>PATERNO</th>
+          <th>MATERNO</th>
+          <th>NOMBRE</th>
+          <th>EMAIL</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDatos"></tbody>
+    </table>
+  </div>
+  <script type="text/javascript">
+  	
+  	$("#btnBuscar").click(function(){
+      
+      // Obtiene los datos del formulario en formato JSON
+      var dataForm = $('#form1').serialize();
+      // Construir URL del recurso
+      var urlResource = "http://localhost:8084/ClienteCrudRest/rest/clientes/buscar";
+      // LLamada AJAX
+  		$.ajax({
+        url: urlResource,
+        type: "GET", 
+        headers: {"Accept":"application/json"},
+        data: dataForm, 
+        success: function ( response ) {
+          cargarDatos( response );
+        }
+      });
+          
+  	});
+  	
+  	$("#btnTodos").click(function(){
+  		$.ajax({
+            url: 'http://localhost:8084/ClienteCrudRest/rest/clientes', // url del recurso
+            type: "GET", // podría ser get, post, put o delete.
+            headers: {"Accept":"application/json"},
+            //contentType: "application/xml; charset=utf-8",
+            //data: {}, // datos a pasar al servidor, en caso de necesitarlo
+            //dataType: "xml",
+            success: function ( response ) {
+              cargarDatos( response );
+            }
+          });
+  	});
+    
+    function cargarDatos( response ){
+      
+      $("#tablaDatos").empty();
+      
+      if( response == null ){
+        return;
+      }
+      
+      if( $.isArray( response.clientes ) ) {
+        
+        $.each( response.clientes, function(index, rec){
+          appendRow( rec );
+        });
+        
+      } else {
+        
+        appendRow( response.clientes );
+        
+      }
+      
+      
+      
+    }
+    
+    function appendRow( rec ){
+      var rowData = "<tr>";
+      rowData += "<td>" + rec.codigo + "</td>";
+      rowData += "<td>" + rec.paterno + "</td>";
+      rowData += "<td>" + rec.materno + "</td>";
+      rowData += "<td>" + rec.nombre + "</td>";
+      rowData += "<td>" + rec.email + "</td>";
+      rowData += "</tr>";
+      $("#tablaDatos").append( rowData );
+    }
+  
+  </script>
+</body>
+</html>

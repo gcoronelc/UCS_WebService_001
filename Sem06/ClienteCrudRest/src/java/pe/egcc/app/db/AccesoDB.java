@@ -18,7 +18,7 @@ public final class AccesoDB {
     try {
       // Datos MySQL
       String driver = "com.mysql.jdbc.Driver";
-      String url = "jdbc:mysql://172.33.0.16:3306/EUREKABANK";
+      String url = "jdbc:mysql://localhost:3306/EUREKABANK";
       String user = "eureka";
       String pass = "admin";
       // Cargar el driver a memoria

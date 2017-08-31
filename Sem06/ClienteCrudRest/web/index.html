@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script src="js/egcc.js" type="text/javascript"></script>
   </head>
   <body>
     <h1>CRUD DE CLIENTES</h1>
     <div>
-      <a class="menuItem" id="lnkBuscar" href="#">Buscar</a>
+      <a class="menuItem" id="lnkBuscar" href="javascript: loadPage('buscar.html')">Buscar</a>
       <a class="menuItem" id="lnkCrear" href="#">Crear</a>
       <a class="menuItem" id="lnkActualizar" href="#">Actualizar</a>
       <a class="menuItem" id="lnkEliminar" href="#">Eliminar</a>
@@ -19,12 +20,8 @@
     <div id="divPanel"></div>
     <script>
       
-      $("#lnkCrear").click(function(){
-        
-        alert("Hola");
-        
-      });
+
       
     </script>
   </body>
-</html>
+</html> 
